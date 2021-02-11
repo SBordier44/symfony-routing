@@ -1,0 +1,19 @@
+list:
+    path: /
+    defaults:
+        _controller: App\Controller\TaskController@index
+show:
+    path: /show/{id}
+    requirements:
+        id: '\d+'
+    defaults:
+        _controller: App\Controller\TaskController@show
+create:
+    path: /create
+    defaults:
+        _controller: App\Controller\TaskController@create
+hello:
+    path: /hello/{name}
+    defaults:
+        name: World
+        _controller: App\Controller\HelloController@sayHello
